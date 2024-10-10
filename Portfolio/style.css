@@ -1,0 +1,851 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    color: aliceblue;
+    background-color: #081b29;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 10px;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideTop 0.2s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover {
+    color: #0cf;
+}
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('img/bg3.jpg') no-repeat;
+    display: flex;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-content {
+    max-width: 600px;
+}
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.7s;
+}
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+}
+.home-content h3 span {
+    color: #0cf;
+}
+.home-content h1 {
+    font-size: 55px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-sic {
+    display: flex;
+    gap: 15px;
+}
+.home-sic a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(0.2s * var(--1));
+    transition: .2s ease;
+    margin: 30px 15px 30px 0;
+}
+.home-sic a:hover {
+    background: #0ef;
+    color: #001b29;
+    box-shadow: 0 0 20px 0 #0ef;
+}
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    margin: 15px 0px;
+    background: #0ef;
+    border-radius: 48px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+}
+.btn-box:hover {
+    box-shadow: 0 0 5px 0 cyan,
+    0 0 25px cyan, 0 0 58px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* justify-content: center; */
+    align-items: center;
+    gap: 1.5rem;
+    
+    
+}
+.about-img img{
+    padding-bottom:20%;
+    max-width: 630px;
+    height:auto;
+    width: 100%;
+    border-radius: 8px;
+}
+.about-text{
+  margin-top: 25px;
+}
+.about-text h2{
+    font-size: 60px;
+}
+.about-text h2 span{
+
+    color: #0ef;
+}
+.about-text h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+#services{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.contain{
+    margin-top: 30px;
+}
+.sub-title{
+   
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.sub-title span{
+    color: #0ef;
+}
+.container{
+    padding: 90px;
+}
+.service-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px; 
+}
+.service-list div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7,
+        1px 1px 40px #0053b8f7
+}
+.service-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.service-list div h2{
+    font-size: 30px;
+    margin-bottom:15px;
+    font-weight: 500;
+}
+.service-list div a{
+    text-decoration:none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.read{
+    display: inline-block;
+    padding:12px 28px;
+    background:#0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing:1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef,
+}
+.read:hover{
+    box-shadow: 0 0 5px 0 cyan,
+    0 0 25px cyan, 0 0 58px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+}
+.service-list div:hover{
+    /* background: #0ef; */
+    transform: translateY(-10px);
+}
+section {
+    display: flex;
+    justify-content: space-around; /* Adjusts the space between the containers */
+    align-items: flex-start; /* Aligns the items at the start */
+    flex-wrap: wrap; /* Ensures the containers wrap if the screen is too small */
+    gap: 20px; /* Adds a gap between the two sections */
+}
+
+.container1 {
+    width: 43%; /* Adjusts the width of each container */
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow effect */
+    background-color: #102a42; /* Optional: Adds a background color */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+/* Adjust the heading to ensure they remain centered */
+.heading1 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+}
+.technical-bars{
+    margin-top: 26px;
+}
+
+.bar{
+    font: size 23px;
+    margin-top: 25px;
+}
+.Technical-bars .bar{
+    margin-top :70px;
+}
+.Technical-bars .bar:first-child{
+    margin-top: 0;
+}
+.Technical-bars .bar:last-child{
+
+    margin-bottom: 0px;
+}
+.Technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+
+.Technical-bars .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation:showText 0.5s 1s linear forwards;
+}
+
+.Technical-bars .bar .info{
+    font-size: 17px;
+    font-weight: 500;
+    animation:showText 0.5s 1s linear forwards;
+    opacity:0;
+}
+.progress-line {
+    margin-top: 5px;
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: #000000; /* A light gray background */
+    border-radius: 10px;
+    overflow: hidden; /* Ensure overflow is hidden so the progress is animated properly */
+}
+
+.progress-line span {
+    position: absolute;
+    height: 100%;
+    border-radius: 5px;
+    background: #00eeff; /* Color of the actual progress */
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+@keyframes fillProgress {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+
+.progress-line.html span{
+    width: 90%;
+}
+.progress-line.css span{
+    width: 80%;
+}
+.progress-line.javascript span{
+    width: 70%;
+}
+.progress-line.python span{
+    width: 60%;
+}
+.progress-line.react span{
+    width: 70%;
+}
+
+.progress-line span::after{
+    position: absolute;
+    padding : 1px 8px;
+    background-color : #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px; 
+    right:-20px;
+    animation :showText 0.5s 1s linear forwards;
+    opacity:0;
+}
+.progress-line.html span::after {
+    content: '90%';
+}
+.progress-line.css span::after {
+    content: '80%';
+}
+.progress-line.javascript span::after {
+    content: '70%';
+}
+.progress-line.python span::after {
+    content: '60%';
+}
+.progress-line.react span::after {
+    content: '70%';
+}
+
+.progress-line span::before{
+    content : "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border : 10px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right:0;
+    animation:showText 0.5s 1s linear forwards;
+    opacity:0;
+}
+
+@keyframes showText {
+    100% { opacity: 1; }
+}
+/* Container for radial bars */
+.radial-bars {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: -9px;
+    flex-wrap: wrap; /* Ensures that the items wrap if the screen is small */
+}
+
+/* Individual radial bar container */
+.radial-bar {
+    width: 150px;
+    height: 170px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SVG container and the circle */
+.radial-bar svg {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    transform: rotate(-90deg);
+}
+
+/* Background circle */
+.radial-bar .progress-bar {
+    fill: none;
+    stroke: #000000; /* Light grey background circle */
+    stroke-width: 10;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 0;
+}
+
+/* Foreground circle for progress */
+.radial-bar .path {
+    fill: none;
+    stroke-width: 10;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502; /* Start with the full offset, progress reduces this */
+    stroke-linecap: round;
+}
+
+/* Animation for each path */
+.path-1 {
+    stroke: #00eeff; /* Blue color */
+    animation: animate-path1 2s linear forwards;
+}
+
+/* .path-2 {
+    stroke: #ff9900; 
+    animation: animate-path2 2s linear forwards;
+}
+
+.path-3 {
+    stroke: #ff3333; 
+    animation: animate-path3 2s linear forwards;
+}
+
+.path-4 {
+    stroke: #33cc33; 
+    animation: animate-path4 2s linear forwards;
+} */
+
+/* Keyframe animations for each path */
+/* Adjust stroke-dashoffset according to percentage */
+@keyframes animate-path1 {
+    100% { stroke-dashoffset: 100; }  /* 80% completion */
+}
+
+@keyframes animate-path2 {
+    100% { stroke-dashoffset: 50; }   /* 90% completion */
+}
+
+@keyframes animate-path3 {
+    100% { stroke-dashoffset: 125; }  /* 75% completion */
+}
+
+
+@keyframes animate-path4 {
+    100% { stroke-dashoffset: 100; }  /* 80% completion */
+}
+
+/* Styling for the percentage text */
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    animation: showText 0.2s 1s linear forwards;
+    opacity: 0;
+    color: #ffe6e6;
+}
+
+/* Skill text below the radial bar */
+.text2 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #dbdbdb;
+    font-weight: bold;
+    text-align: center;
+}
+/* Main text section */
+/* Main text container */
+.main-text {
+    padding-top: 100px;
+    margin-top: 60px;
+    text-align: center; /* Center align the text */
+}
+
+/* Heading styles */
+.main-text h2 {
+    font-size: 60px;
+    line-height: 1;
+    text-align: center; /* Ensure heading is centered */
+    margin: 0; /* Remove default margin */
+}
+
+.main-text h2 span {
+    color: #0ef;
+}
+
+/* Portfolio content grid */
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(359px, 1fr)); /* Ensure responsive columns */
+    gap: 20px; /* Add gap between items */
+    justify-content: center; /* Center align items within the container */
+    align-items: start; /* Align items at the start */
+    padding: 20px; /* Add padding for spacing */
+}
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.3s ease-in-out;
+}
+
+.row:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Add a shadow on hover */
+}
+
+.row img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.row:hover img {
+    transform: scale(1.1); /* Slight zoom on image hover */
+}
+
+/* Layer content over the image */
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.row:hover .layer {
+    opacity: 1; /* Show layer on hover */
+}
+
+.layer h5 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.layer p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.layer a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Individual portfolio item */
+
+/* General styles for the contact section */
+.contact-section {
+    color: #757d8a; /* Dark gray color for text */
+    font-family: Arial, sans-serif; /* Default font family */
+    position: relative;
+}
+
+.container {
+    max-width: 1200px; /* Max width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Padding on the left and right */
+}
+
+.text-center {
+    text-align: center; /* Center text */
+    margin-bottom: 48px; /* Space below the title */
+    margin-top: 60px;
+}
+
+.title {
+    font-size: 2rem; /* Title font size */
+    font-weight: 600; /* Bold title */
+    margin-bottom: 16px; /* Space below the title */
+}
+
+.subtitle {
+    max-width: 66.67%; /* Max width for the subtitle */
+    margin: 0 auto; /* Center the subtitle */
+    font-size: 1rem; /* Subtitle font size */
+}
+
+/* Form styles */
+.form-container {
+    width: 100%; /* Full width for the form */
+    max-width: 600px; /* Max width for the form */
+    margin: 0 auto; /* Center the form */
+    padding: 20px; /* Padding inside the form */
+    /* border: 1px solid #E2E8F0; Light gray border */
+    border-radius: 8px; /* Rounded corners for the form */
+    background-color: #555557; /* Light background color */
+}
+
+.form-row {
+    display: flex; /* Flex layout for form groups */
+    flex-wrap: wrap; /* Allow wrapping */
+    margin: -8px; /* Negative margin for spacing */
+}
+
+.form-group {
+    padding: 8px; /* Space around each form group */
+    width: 50%; /* Default width for form groups */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.full-width {
+    width: 100%; /* Full width for specific form groups */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 8px; /* Space below labels */
+    font-size: 0.875rem; /* Label font size */
+    color: #fdfdfd; /* Dark gray color for labels */
+}
+
+.input-field,
+.textarea-field {
+    width: 100%; /* Full width for input and textarea */
+    padding: 12px; /* Padding inside input and textarea */
+    border: 1px solid #7e7e7e; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #727374; /* Light gray background */
+    color: #ffff; /* Dark gray color for text */
+    font-size: 1rem; /* Font size for input and textarea */
+    transition: border-color 0.2s; /* Transition for border color */
+}
+
+/* Focus styles for inputs */
+.input-field:focus,
+.textarea-field:focus {
+    border-color: #5A67D8; /* Border color on focus */
+    outline: none; /* Remove default outline */
+    background-color: #5557; /* Change background on focus */
+}
+
+.textarea-field {
+    height: 150px; /* Fixed height for textarea */
+    resize: none; /* Disable resizing */
+}
+
+/* Button styles */
+.submit-button {
+    display: flex; /* Flex display for button */
+    margin: 0 auto; /* Center the button */
+    padding: 12px 32px; /* Padding inside the button */
+    background-color: #5A67D8; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for button */
+    font-size: 1.125rem; /* Font size for button */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Transition for background color */
+}
+
+/* Button hover effect */
+.submit-button:hover {
+    background-color: #4C51BF; /* Darker shade on hover */
+}
+
+/* Contact info styles */
+.contact-info {
+    padding-top: 32px; /* Space above contact info */
+    text-align: center; /* Center text for contact info */
+    border-top: 1px solid #E2E8F0; /* Top border */
+}
+
+.email {
+    color: #5A67D8; /* Link color */
+    text-decoration: none; /* No underline for links */
+}
+
+.address {
+    margin: 16px 0; /* Margin above and below address */
+    font-size: 0.875rem; /* Font size for address */
+}
+
+/* Social links styles */
+/* Social links styles */
+.social-links {
+    display: flex; /* Flex display for social links */
+    justify-content: center; /* Center social links */
+    align-items: center; /* Vertically align icons */
+    margin-top: 20px; /* Add space above social icons */
+}
+
+.social-icon {
+    margin: 0 8px; /* Space between social icons */
+    display: inline-flex; /* Inline flex for better alignment */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+}
+
+.icon {
+    width: 24px; /* Increase width for better visibility */
+    height: 24px; /* Increase height for better visibility */
+    fill: #A0AEC0; /* Gray color for icons */
+    transition: fill 0.2s; /* Transition for icon color */
+}
+
+/* Change icon color on hover */
+.social-icon:hover .icon {
+    fill: #4A5568; /* Darker color on hover */
+}
+
+/* Change icon color on hover */
+.social-icon:hover .icon {
+    fill: #4A5568; /* Darker color on hover */
+}
+
+.text-center h2 {
+    font-size: 60px;
+    color: #fff;
+    line-height: 1;
+    text-align: center; /* Ensure heading is centered */
+    margin: 0; /* Remove default margin */
+    
+}
+
+ h2 span {
+    color: #0ef;
+}
+
+
+.thank-you-message {
+    text-align: center;
+    margin-top: 20px;
+    color: #4A5568; /* Dark text color */
+}
+
+.thank-you-message h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color:rgb(151, 207, 211)
+}
+
+.thank-you-message p {
+    color: #666; /* Lighter text color */
+}
+.hidden {
+    display: none;
+}
+
+.thank-you-message {
+    text-align: center;
+    margin-top: 20px;
+    color: #4A5568; /* Dark text color */
+}
+
+.thank-you-message h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.thank-you-message p {
+    color: #d16e6e; /* Lighter text color */
+}
+
+/* we have to take technical and professional skill side by side */
+
+
+/* @keyframes animate {
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+    
+}
+ */
